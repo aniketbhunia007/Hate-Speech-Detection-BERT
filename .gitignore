@@ -5,3 +5,4 @@ outputs/
 reports/
 __pycache__/
 model_transfer_learning.txt
+api_credentials.txt
