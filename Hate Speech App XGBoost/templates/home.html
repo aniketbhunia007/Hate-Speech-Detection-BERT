@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- <title>Home</title> -->
+	<!-- <link rel="stylesheet" type="text/css" href="../static/styles.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='../static/styles.css') }}"> -->
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">	 -->
+	<link rel="stylesheet" type="text/css" href="../static/styles.css">
+	<meta charset="UTF-8">
+    <title>Hate Speech Detection - BERT</title>
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			NLP App with Flask
+		</div>
+		<h2>Hate Speech Detector - XGBoost</h2>
+		
+	</div>
+	</header>
+
+	<div class="ml-container">
+			<form method="POST" action="/predict">
+				<div class="form-group">
+				  <label for="text_input"><p class="font-weight-bold">Text Input</p></label>
+				  <textarea name="text_input" rows="4" cols="50"></textarea>
+				  <br/>
+				  <!-- <input type="submit" class="btn-info" value="predict">		   -->
+				  <small id="NYHelp" class="form-text text-muted">Enter your text input</small>
+				  </div>
+				  <input class='btn btn-primary' type='submit' value='Submit'>
+
+				  
+				  <h3>We can also perform analysis on a given hashtag</h3>	
+
+				  <div class="form-group">
+					<label for="hashtag"><p class="font-weight-bold">Hashtag</p></label>
+					<input type="text" name="hashtag">
+					<small id="CaliforniaHelp" class="form-text text-muted">Enter the hashtag you want to search for</small>
+					</div>
+	
+					<div class="form-group">
+					  <label for="num_tweets"><p class="font-weight-bold">No of Tweeets</p></label>
+					  <input type="number" name="num_tweets">
+					  <small id="FloridaHelp" class="form-text text-muted">Enter no. tweets you wish to scrape</small>
+					  </div>
+	
+					  <div class="form-group">
+						<label for="date"><p class="font-weight-bold">Since when</p></label>
+						<input type="text" name="date">
+
+						<small id="RnDSpendHelp" class="form-text text-muted">Input date in format : YYYY-MM-DD</small>
+						</div>
+
+						<input class='btn btn-primary' type='submit' value='Submit'>
+
+
+						<h3>Our platform can analyze a particular user's tweets</h3>	
+
+						<div class="form-group">
+							<label for="username"><p class="font-weight-bold">Username</p></label>
+							<input type="text" name="username">
+							<small id="RnDSpendHelp" class="form-text text-muted">Enter username</small>
+							</div>
+
+							<div class="form-group">
+								<label for="no_of_tweets"><p class="font-weight-bold">No of tweets per user</p></label>
+								<input type="text" name="no_of_tweets">
+								<small id="RnDSpendHelp" class="form-text text-muted">Enter no of tweets per user</small>
+								</div>
+
+
+	
+	
+								<input class='btn btn-primary' type='submit' value='Submit'>
+				</form>
+	
+
+		<!-- <form action="{{ url_for('predict')}}" method="POST">
+		<p>Enter Your Message Here</p>
+		<textarea name="message" rows="4" cols="50"></textarea>
+		<br/>
+
+		<input type="submit" class="btn-info" value="predict">
+		
+	</form>
+	
+		<form action="{{ url_for('predict')}}" method="POST">
+		<p>Type the hashtag</p>
+		<textarea name="hashtag" rows="1" cols="50"></textarea>
+		<br/>
+
+		<input type="text" class="btn-info" value="submit">
+		
+	</form>
+	
+	<form action="{{ url_for('predict')}}" method="POST">
+		<p>How many tweets</p>
+		<input type="number" name="no_of_tweets"/>
+		<br/>
+		
+	</form>
+
+	<form action="{{ url_for('predict')}}" method="POST">
+		<p>Since when (Date format YYYY-MM-DD)</p>
+		<input type="text" name="date"/>
+		<br/>
+		<input type="submit" class="btn-info" value="okay! lets extract and predict">
+		
+	</form>
+
+	</div> -->
+
+	
+	
+
+</body>
+</html>
