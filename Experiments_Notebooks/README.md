@@ -7,6 +7,7 @@ Notebook Descriptions -
 6. [XGBoost_deployement.ipynb](./XGBoost_deployement.ipynb) - Training on the whole dataset, no train_test split here, a whole new model on the whole dataset
 7. [real_world_testing.ipynb](./real_world_testing.ipynb) - To test our model on real-world datasets scarped from twitter based on tweepy, by username or hashtag
 8. [live_scraping.ipynb](./live_scraping.ipynb) - The tweepy scripts to scrape these real-world datasets
-9. [Model_NAACL+NLP_CSS.ipynb](./Model_NAACL+NLP_CSS.ipynb) -  Model on NAACL + NLP_CSS
-10. [Data Preprocessing_and_Analysis_Crowdflower.ipynb](./Data Preprocessing_and_Analysis_Crowdflower.ipynb) -  Model on crowdflower
-11. [Data Preprocessing and Analysis Twitter_Scarped.ipynb](./Data Preprocessing_and_Analysis_Crowdflower.ipynb) - Data Analysis on NAACL + NLP_CSS
+9. [Model_NAACL+NLP_CSS.ipynb](./Model_NAACL+NLP_CSS.ipynb) -  Model on NAACL+NLP_CSS
+
+* [Data_Preprocessing_and_Analysis_Twitter_Scarped.ipynb](./Data_Preprocessing_and_Analysis_Twitter_Scarped.ipynb) -  Model on crowdflower
+* [Data_Preprocessing_and_Analysis_Crowdflower.ipynb](./Data_Preprocessing_and_Analysis_Crowdflower.ipynb) - Data Analysis on NAACL + NLP_CSS
