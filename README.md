@@ -2,7 +2,7 @@
 * American Express Ignite Project 2019
 * Pranav D. Pawar ; Mentor : Lokesh Kumar Kriplani
 
-Detailed documentation and experiments details - [here](./hate_sppech_doc.pdf)
+Detailed documentation and experiments details - [here](/hate_speech_doc.pdf)
 
 ### Flask Web App
 * Primary features of API - 
