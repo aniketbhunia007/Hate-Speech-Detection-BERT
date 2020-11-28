@@ -4,10 +4,15 @@ import os
 
 def get_all_tweets(screen_name, no_of_tweets):
     #Twitter API credentials
-    consumer_key = ## Your Key
-    consumer_secret = ## Your Key
-    access_token = ## Your Key
-    access_token_secret = ## Your Key
+#     consumer_key = ## Your Key
+#     consumer_secret = ## Your Key
+#     access_token = ## Your Key
+#     access_token_secret = ## Your Key
+
+    consumer_key = 'hQSfuYsO9ybVNVKPCxURndKQ6'
+    consumer_secret = 'BUbTUcCSOozzU3PzFSbt44A4nWDjWVccAwuyPTgzQo25ImhcsV'
+    access_token = '1030700072755855361-1bl3CyvIAvr8VQ74j368130fq7odUT'
+    access_token_secret = '1cw58KNSxH0VCs0bqZCbYdevCIm6sIpzQLkuBvglqirwQ'
 
     try:
         os.remove('username_tweets.csv')

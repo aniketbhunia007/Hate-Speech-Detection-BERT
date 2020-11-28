@@ -325,6 +325,15 @@ def preprocess_2(data):
   data['tweet'] = data['tweet'].apply(lambda x: " ".join([Word(word).lemmatize() for word in x.split()]))
   data['tweet'].head()
 
+# Load pre-trained model tokenizer (vocabulary)
+tokenizer = BertTokenizer.from_pretrained(OUTPUT_DIR + 'vocab.txt', do_lower_case=False)
+
+processor = BinaryClassificationProcessor()
+# Load pre-trained model (weights)
+
+model = BertForSequenceClassification.from_pretrained(CACHE_DIR + BERT_MODEL, cache_dir=CACHE_DIR, num_labels=2)
+model.to(device)
+model.eval()
 
 app = Flask(__name__)
 
@@ -334,13 +343,13 @@ def home():
 
 
 @app.route('/predict',methods=['POST'])
-def predict():
+def predict(model=model,tokenizer=tokenizer,processor=processor):
 
-    # Load pre-trained model tokenizer (vocabulary)
-    tokenizer = BertTokenizer.from_pretrained(OUTPUT_DIR + 'vocab.txt', do_lower_case=False)
+    # # Load pre-trained model tokenizer (vocabulary)
+    # tokenizer = BertTokenizer.from_pretrained(OUTPUT_DIR + 'vocab.txt', do_lower_case=False)
 
-    processor = BinaryClassificationProcessor()
-    # Load pre-trained model (weights)
+    # processor = BinaryClassificationProcessor()
+    # # Load pre-trained model (weights)
 
     if request.method == 'POST':
         if len(request.form['text_input'])>1:
@@ -390,10 +399,9 @@ def predict():
             eval_sampler = SequentialSampler(eval_data)
             eval_dataloader = DataLoader(eval_data, sampler=eval_sampler, batch_size=EVAL_BATCH_SIZE)
 
-            model = BertForSequenceClassification.from_pretrained(CACHE_DIR + BERT_MODEL, cache_dir=CACHE_DIR, num_labels=len(label_list))
-            model.to(device)
-            
-            model.eval()
+            # model = BertForSequenceClassification.from_pretrained(CACHE_DIR + BERT_MODEL, cache_dir=CACHE_DIR, num_labels=len(label_list))
+            # model.to(device)
+            # model.eval()
             eval_loss = 0
             nb_eval_steps = 0
             preds = []

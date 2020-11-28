@@ -5,11 +5,15 @@ import os
 def scrape(hashtag, date, no_of_tweets):
     ####input your credentials here
     
-    consumer_key = ## Your Key
-    consumer_secret = ## Your Key
-    access_token = ## Your Key
-    access_token_secret = ## Your Key
-
+#     consumer_key = ## Your Key
+#     consumer_secret = ## Your Key
+#     access_token = ## Your Key
+#     access_token_secret = ## Your Key
+    consumer_key = 'hQSfuYsO9ybVNVKPCxURndKQ6'
+    consumer_secret = 'BUbTUcCSOozzU3PzFSbt44A4nWDjWVccAwuyPTgzQo25ImhcsV'
+    access_token = '1030700072755855361-1bl3CyvIAvr8VQ74j368130fq7odUT'
+    access_token_secret = '1cw58KNSxH0VCs0bqZCbYdevCIm6sIpzQLkuBvglqirwQ'
+    
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
     api = tweepy.API(auth,wait_on_rate_limit=True)
