@@ -519,11 +519,11 @@ def predict(model=model,tokenizer=tokenizer,processor=processor):
             eval_sampler = SequentialSampler(eval_data)
             eval_dataloader = DataLoader(eval_data, sampler=eval_sampler, batch_size=EVAL_BATCH_SIZE)
 
-            model = BertForSequenceClassification.from_pretrained(CACHE_DIR + BERT_MODEL, cache_dir=CACHE_DIR, num_labels=len(label_list))
-            model.to(device)
+            # model = BertForSequenceClassification.from_pretrained(CACHE_DIR + BERT_MODEL, cache_dir=CACHE_DIR, num_labels=len(label_list))
+            # model.to(device)
 
 
-            model.eval()
+            # model.eval()
             eval_loss = 0
             nb_eval_steps = 0
             preds = []
@@ -654,11 +654,11 @@ def predict(model=model,tokenizer=tokenizer,processor=processor):
             eval_sampler = SequentialSampler(eval_data)
             eval_dataloader = DataLoader(eval_data, sampler=eval_sampler, batch_size=EVAL_BATCH_SIZE)
 
-            model = BertForSequenceClassification.from_pretrained(CACHE_DIR + BERT_MODEL, cache_dir=CACHE_DIR, num_labels=len(label_list))
-            model.to(device)
+            # model = BertForSequenceClassification.from_pretrained(CACHE_DIR + BERT_MODEL, cache_dir=CACHE_DIR, num_labels=len(label_list))
+            # model.to(device)
 
 
-            model.eval()
+            # model.eval()
             eval_loss = 0
             nb_eval_steps = 0
             preds = []

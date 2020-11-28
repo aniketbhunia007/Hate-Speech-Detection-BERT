@@ -14,6 +14,8 @@ def get_all_tweets(screen_name, no_of_tweets):
     access_token = '1030700072755855361-1bl3CyvIAvr8VQ74j368130fq7odUT'
     access_token_secret = '1cw58KNSxH0VCs0bqZCbYdevCIm6sIpzQLkuBvglqirwQ'
 
+    access_key, access_secret = access_token, access_token_secret
+
     try:
         os.remove('username_tweets.csv')
         print('file removed')

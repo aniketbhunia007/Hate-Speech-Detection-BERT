@@ -39,11 +39,12 @@ def scrape(hashtag, date, no_of_tweets):
     for tweet in tweepy.Cursor(api.search,q=hashtag,
                             lang="en",
                             since=date,tweet_mode='extended').items(no_of_tweets):
-        print (tweet.created_at, tweet.full_text)
+        print(tweet.created_at, tweet.full_text)
         
     #     we use tweet_mode='extended' to get the full tweet. And similarly, use the attribute full_text to extract it from the status
         csvWriter.writerow([tweet.created_at, tweet.full_text.encode('utf-8')])
 
 
 if __name__ == '__main__':
-	scrape()
+    # print('testing the scraping!')
+	scrape("#IStandWithFarmers", "2020-11-20", 20)
